@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<math.h>
+
+/*
+Armstrong Number OR Not
+By:AYS
+*/
+
+int main(){
+	
+	int n1,m,r,result=0,n=0;
+    printf("Enter a Number to check Armstrong or Not\n");
+    printf("-------------------------------------------------------------------------------------\n");
+    
+    printf("Enter a Number:\n");
+	  scanf("%d",&n1);
+	
+	m=n1;
+	
+	while(m!=0)
+	{
+		m/=10;
+		++n;
+	}
+	
+	m=n1;
+	
+	while(m!=0)
+	{
+		r=m%10;
+		result +=pow(r,n);
+		m/=10;
+	}
+	
+	if(result==n1)
+	  printf("%d The number is Armstrong Number \n\n",n1);
+	
+	else
+	  printf("%d The number is Not Armstrong Number \n\n",n1);
+	
+	return 0;
+	
+}
