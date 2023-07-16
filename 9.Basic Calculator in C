@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+
+/*
+Basic Calculator for ADD/SUB/DIV/MULTI/PERCENTAGE in C
+By:AYS
+*/
+
+int main()
+{
+	int choice,x,y;
+	
+	do
+	{
+  	printf("\n\n");	
+  	printf("**********MENU**********\n");
+  	printf("1.ADDITION\n");
+  	printf("2.SUBTRACTION\n");
+  	printf("3.DIVISION\n");
+  	printf("4.MULTIPLICATION\n");
+    printf("5.PERCENTAGE\n");	
+    printf("6.EXIT\n");
+  	printf("\nEnter your Choice \n");
+  	scanf("%d",&choice);
+	
+	if(choice>=1 && choice<=5)
+  {	
+  	printf("\nEnter 2 Numbers\n");
+  	scanf("%d%d",x,y);
+  }
+
+	switch(choice)
+  {
+ 	case 1:printf("Addition = %d",x+y);
+	break;
+	
+	case 2:printf("Subtraction = %d",x-y);
+	break;
+	
+	case 3:printf("Division = %d",x/y);
+	break;
+	
+	case 4:printf("Multiplication = %d",x*y);
+	break;
+	
+	case 5:printf("Percentage is = %0.2f",(float)x*100/y);
+	break;
+	
+	case 6:printf("\n\nGOODBYE\n\n");
+	break;
+	
+	default: printf("\n Invalid Input");
+	break;
+  }
+    
+    getch(); 
+    }while(choice!=5);
+
+    return 0;
+
+}
